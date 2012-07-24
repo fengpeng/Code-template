@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建具有类型的 Vector 实例" enabled="true" id="com.adobe.flexide.as.core.codetemplates.vector" name="vector">var ${name}:Vector.&lt;${type}&gt; = new Vector.&lt;${type}&gt;();&#13;
+${cursor}</template></templates>
