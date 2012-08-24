@@ -1,2 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="" enabled="true" name="Minject">[Inject]&#13;
-public var ${name}:${Type};</template></templates>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="flexunit test" enabled="true" name="MTest">[Before]&#13;
+public function setup():void {&#13;
+	${cursor}&#13;
+}&#13;
+&#13;
+[Test]&#13;
+public function ${testname}():void {&#13;
+}</template></templates>
