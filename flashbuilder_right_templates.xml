@@ -1,2 +1,150 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建具有类型的 Vector 实例" enabled="true" id="com.adobe.flexide.as.core.codetemplates.vector" name="vector">var ${name}:Vector.&lt;${type}&gt; = new Vector.&lt;${type}&gt;();&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="Class Ccconstants comment" enabled="true" name="ccconstants">//==========================================================================&#13;
+//  Class constants&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="Class private methods comment" enabled="true" name="ccimethods">//==========================================================================&#13;
+//  Class private methods&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="Class protected methods comment" enabled="true" name="ccomethods">//==========================================================================&#13;
+//  Class protected methods&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建常量" enabled="true" name="cconstant">${specifier:values(public, private, protected)} static const ${name}:${type:values(String, Boolean, int)};&#13;
+${cursor}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="Constructor comment" enabled="true" name="cconstructor">//==========================================================================&#13;
+//  Constructor&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="Class properties comment" enabled="true" name="ccproperties">//==========================================================================&#13;
+//  Class properties&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="Class Ccumethods comment " enabled="true" name="ccumethods">//==========================================================================&#13;
+//  Class public methods&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="Class variables comment" enabled="true" name="ccvariables">//==========================================================================&#13;
+//  Class variables&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="相关的注入的依赖" enabled="true" name="Cdependencies">//==========================================================================&#13;
+//  Dependencies&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="Event handler comment" enabled="true" name="cehandler">//==========================================================================&#13;
+//  Event Handler&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="接口实现" enabled="true" name="cii">//==========================================================================&#13;
+//  Implements Interface&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="private method comment" enabled="true" name="cimethods">//==========================================================================&#13;
+//  Private methods&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_package" deleted="false" description="创建类" enabled="true" id="com.adobe.flexide.as.core.codetemplates.class" name="class">/**&#13;
+ * @author ${user}&#13;
+ */&#13;
+${specifier:values(public, private, protected)} class ${enclosing_type} {&#13;
+	${cursor}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="protected method comment" enabled="true" name="comethods">//==========================================================================&#13;
+//  Protected methods&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_type_members" deleted="false" description="为类创建构造函数" enabled="true" id="com.adobe.flexide.as.core.codetemplates.constructor" name="constructor">public function ${enclosing_type}() {&#13;
+	${cursor}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="ovrride method comment" enabled="true" name="covmethods">//==========================================================================&#13;
+//  Override methods&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="properties comment" enabled="true" name="cproperties">//==========================================================================&#13;
+//  Properties&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="public method comment" enabled="true" name="cumethods">//==========================================================================&#13;
+//  Public methods&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="variables comment" enabled="true" name="cvariables">//==========================================================================&#13;
+//  Variables&#13;
+//==========================================================================</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_statement" deleted="false" description="创建 do-while 循环" enabled="true" id="com.adobe.flexide.as.core.codetemplates.do" name="do">do {&#13;
+	${line_selection}${cursor}&#13;
+} while(${condition:local_var(Boolean)});</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="为自定义事件类创建主体" enabled="true" id="com.adobe.flexide.as.core.codetemplates.eventBody" name="event body">public static const ${type_const}:String = "${type_const_value}";
+
+public function ${enclosing_type}(type:String, ${cursor}bubbles:Boolean = ${bubbles:values(false,true)}, cancelable:Boolean = ${cancel:values(false,true)}) {
+	super(type, bubbles, cancelable);
+}
+override public function clone():Event {
+	return new ${enclosing_type}(type, bubbles, cancelable);
+}
+override public function toString():String {
+	return formatToString("${enclosing_type}", "type", "bubbles", "cancelable",
+	"eventPhase");
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_statement" deleted="false" description="使用枚举对数组的值进行迭代" enabled="true" id="com.adobe.flexide.as.core.codetemplates.fore" name="fore">for each (var ${index}:int in ${array}) {&#13;
+	${line_selection}${cursor}&#13;
+}
+</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_statement" deleted="false" description="迭代数组" enabled="true" id="com.adobe.flexide.as.core.codetemplates.fori" name="fori">for (var ${index}:int = 0; ${index} &lt; ${array}.length; ${index}++) {&#13;
+	${line_selection}${cursor}&#13;
+}
+</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建函数" enabled="true" id="com.adobe.flexide.as.core.codetemplates.function" name="function">${specifier:values(private, public, protected)} function ${fname}():${type:values(void,String,Number,Boolean,Object)} {
+	${line_selection}${cursor}
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_type_members" deleted="false" description="创建 getter 函数" enabled="true" id="com.adobe.flexide.as.core.codetemplates.getter" name="getter">//-----------------------&#13;
+//	${property}	&#13;
+//-----------------------&#13;
+${specifier:values(private, protected)} var _${property}:${Type}${cursor};&#13;
+public function get ${property}():${Type:values(String,Number,Boolean)} {&#13;
+	return _${property};&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="getter和setter一起创建" enabled="true" name="gettersetter">//-----------------------&#13;
+//	${property}	&#13;
+//-----------------------&#13;
+${specifier:values(private, protected)} var _${property}:${Type}${cursor};&#13;
+public function get ${property}():${Type:values(String,Number,Boolean)} {&#13;
+	return _${property};&#13;
+}&#13;
+public function set ${property}(value:${Type}):void {&#13;
+	_${property} = value;&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="输出当前的位置" enabled="true" name="here">"[${enclosing_type}/${enclosing_method}]"</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_statement" deleted="false" description="创建 if 语句" enabled="true" id="com.adobe.flexide.as.core.codetemplates.if" name="if">if (${condition:local_var(Boolean)}) {&#13;
+	${cursor}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_statement" deleted="false" description="创建 if else if 代码块" enabled="true" id="com.adobe.flexide.as.core.codetemplates.ifElseIf" name="if else if">if (${condition1:local_var(Boolean)}) {
+	${cursor}
+}
+else if (${condition2:local_var(Boolean)}) {
+	
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建私有方法" enabled="true" name="ifunction">private function ${fname}(${cursor}):${type:values(void, Boolean, Array)} {&#13;
+	${line_selection}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建静态的私有方法" enabled="true" name="isfunction">private static ${fname}(${cursor}):${type:values(void, Boolean)} {&#13;
+	${line_selection}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建私有的静态变量" enabled="true" name="isvar">private static var ${name}:${type};&#13;
+${cursor}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建私有变量" enabled="true" name="ivar">private var ${name}:${type};</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="" enabled="true" name="Minject">[Inject]&#13;
+public var ${name}:${Type};</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="flexunit test" enabled="true" name="MTest">[Before]&#13;
+public function setup():void {&#13;
+	${cursor}&#13;
+}&#13;
+&#13;
+[Test]&#13;
+public function ${testname}():void {&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="我的代码空间" enabled="true" name="mycodespace">//=============== ${user}'s code space ===============&#13;
+${cursor}&#13;
+//=============== ${user}'s code space ===============</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="需要重构的地方" enabled="true" name="myrefactoring">// Archer's refactoring</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建受保护的方法" enabled="true" name="ofunction">protected function ${fname}(${cursor}):${type:values(void, Boolean)} {&#13;
+	${line_selection}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建受保护的静态方法" enabled="true" name="osfunction">protected static function ${fname}(${cursor}):${type:values(void, Boolean)} {&#13;
+	${line_selection}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建保护的静态变量" enabled="true" name="osvar">protected static var ${name}:${type};&#13;
+${cursor}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建保护变量" enabled="true" name="ovar">protected var ${name}:${type};</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="override Command public method execute" enabled="true" name="overrideExecute">override public function execute():void {&#13;
+	${cursor}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建包" enabled="true" id="com.adobe.flexide.as.core.codetemplates.package" name="package">package ${enclosing_package} {&#13;
+	/**&#13;
+ 	 * @author ${user}&#13;
+ 	 */&#13;
+	public class ${enclosing_type} {&#13;
+		public function ${enclosing_type}() {&#13;
+			${cursor}&#13;
+		}&#13;
+	}	&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_type_members" deleted="false" description="创建属性，包括变量定义、Getter 和 Setter 方法" enabled="true" id="com.adobe.flexide.as.core.codetemplates.property" name="property">private var _${name}:${Type};
+public function get ${name}():${Type} { return _${name}; }
+
+public function set ${name}(${value}:${Type}):void {
+	if (_${name} == ${value})
+		return;
+	_${name} = value;
+}
+${cursor}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_type_members" deleted="false" description="创建 setter 函数" enabled="true" id="com.adobe.flexide.as.core.codetemplates.setter" name="setter">//-----------------------&#13;
+//	${property}	&#13;
+//-----------------------&#13;
+public function set ${property}(value:${Type}):void {&#13;
+	_${property} = value;${cursor}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_statement" deleted="false" description="创建切换块" enabled="true" id="com.adobe.flexide.as.core.codetemplates.switch" name="switch">switch(${expression}) {&#13;
+	case ${result}:&#13;
+		${cursor}&#13;
+		break;&#13;
+	default:&#13;
+		break;&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_type_members" deleted="false" description="创建 toString 函数" enabled="true" id="com.adobe.flexide.as.core.codetemplates.toString" name="toString">override public function toString() : String {&#13;
+	return "${enclosing_package_and_type}";&#13;
+}&#13;
+${cursor}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_statement" deleted="false" description="跟踪当前方法" enabled="true" id="com.adobe.flexide.as.core.codetemplates.traceMethod" name="trace current method">trace("${enclosing_type}.${enclosing_method}(${enclosing_method_arguments})");&#13;
+${cursor}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script_statement" deleted="false" description="创建 try/catch 块" enabled="true" id="com.adobe.flexide.as.core.codetemplates.tryCatch" name="try/catch">try {&#13;
+	${line_selection}${cursor}&#13;
+} &#13;
+catch(${error}:${Error}) {&#13;
+	&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建公共方法" enabled="true" name="ufunction">public function ${fname}():${type:values(void, Boolean)} {&#13;
+	${line_selection}${cursor}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建公开的静态方法" enabled="true" name="usfunction">public static function ${fname}(${cursor}):${type} {&#13;
+	${line_selection}&#13;
+}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建公开静态变量" enabled="true" name="usvar">public static var ${name}:${type};&#13;
+${cursor}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建公开变量" enabled="true" name="uvar">public var ${name}:${type};&#13;
+${cursor}</template><template autoinsert="true" context="com.adobe.flexide.as.core.codetemplates.action_script" deleted="false" description="创建具有类型的 Vector 实例" enabled="true" id="com.adobe.flexide.as.core.codetemplates.vector" name="vector">var ${name}:Vector.&lt;${type}&gt; = new Vector.&lt;${type}&gt;();&#13;
 ${cursor}</template></templates>
